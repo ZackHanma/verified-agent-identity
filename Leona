@@ -1,16 +1,16 @@
-name: alleonardoo
+name: leona
 
 on:
   workflow_dispatch:
     inputs:
       agent_name:
-        description: 'cloud'
+        description: 'leona'
         required: true
-        default: 'cloud'
+        default: 'leona'
       agent_description:
-        description: 'cloud'
+        description: 'leona'
         required: true
-        default: 'cloud AI Agent'
+        default: 'leona AI Agent'
 
 jobs:
   verify:
@@ -38,4 +38,4 @@ jobs:
 
       - name: Step 3 - Link Human to Agent
         run: |
-          node scripts/manualLinkHumanToAgent.js --challenge '{"name": "cloud", "description": "cloud AI Agent"}'
+          node scripts/manualLinkHumanToAgent.js --challenge '{"leona": "leona", "description": "leona AI Agent"}'
